@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Traveller.Contact</title>
+    <link rel="stylesheet" href="contactStyle.css" />
+    <link rel="stylesheet" href="/Header.css">
+    <link rel="stylesheet" href="/Footer.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="main-navBar">
+        <div class="nav-header">
+          <a href="">
+            <img src="/images/Webp/Logi=o.webp" width="60" alt="BrandLogo" />
+          </a>
+          <div class="hamburger-menu">
+            <img
+              src="/icons/menu_48dp_E8EAED_FILL0_wght400_GRAD0_opsz48.svg"
+              alt="hamburger-menu"
+            />
+          </div>
+        </div>
+        <ul class="navbar-menu">
+          <li class="navbar-item"><a href="/index.html" class="navbar-links">Home</a></li>
+          <li class="navbar-item"><a href="/Pages/Blog/Blog.html" class="navbar-links">Blog</a></li>
+          <li class="navbar-item">
+            <a href="/Pages/PhotoPrints/PhotoPrint.html" class="navbar-links">PhotoPrints</a>
+          </li>
+          <li class="navbar-item"><a href="/Pages/About/About.html" class="navbar-links">About</a></li>
+          <li class="navbar-item"><a href="/Pages/Gadget/Gadget.html" class="navbar-links">Gadgets</a></li>
+          <li class="navbar-item">
+            <a href="/Pages/Contact.html" class="navbar-links">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content-conatiner">
+          <h1>Contact</h1>
+          <p>Send me your questions,comments or suggestions!</p>
+        </div>
+        <div></div>
+      </section>
+      <section class="contact-info-section">
+        <h2>Get In Touch</h2>
+        <div class="contact-form-header">
+            
+          <h3>Contact Form</h3>
+          <span class="featured-section-border-varaiant2"></span>
+        </div>
+        <div class="contact-description">
+          <p>Send me your questions, comments, or suggestions!</p>
+          <p>
+            If you'd like to work with me or you have a question or comment, you
+            can contact me using the form below. You can also find more info
+            about me here.
+          </p>
+          <p>
+            Sometimes I'm busy traveling, but I try to respond to any messages!
+          </p>
+        </div>
+      </section>
+      <!-- User Contact Form -->
+      <section  class="contact-form-container">
+          <form id="contact-form" >
+             <div>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" >
+                 <p id="errorNameMessage"></p>
+             </div>
+             <div>
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                <p id="errorEmailMessage"></p>
+             </div>
+             <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" >
+                <p id="errorSubjectMessage"></p>
+             </div>
+             <div>
+                <label for="message">Your message</label>
+                <textarea name="message" id="message" rows="4" cols="50" ></textarea>
+                <p id="errorMessage"></p>
+             </div>
+             <button type="submit">Submit</button>
+          </form>
+      </section>
+    </main> <!-- Footer Section -->
+    <footer>
+      <div class="social-icons">
+          <img src="/icons/icons8-facebook-circled.svg" alt="facebook-Icon" width="24">
+          <img src="/icons/icons8-facebook-messenger.svg" alt="Messenger-Icon" width="24">
+          <img src="/icons/icons8-instagram.svg" alt="Instagram-icon" width="24">
+          <img src="/icons/icons8-twitterx.svg" alt="Twitter-icon" width="24">
+      </div>
+     <section class="footer-terms">
+      <h2>© The World Travel Guy 2024</h2>
+      <ul>
+        <li>Affiliate Disclosures</li>
+        <li> Privacy Policy</li>
+        <li> Terms Of Use</li>
+      </ul>
+
+      <p>
+        Some of the pages on my travel blog contain affiliate links.
+      </p>
+     </section>
+  </footer>
+    <script src="/script.js"></script>
+    <script src="./contact.js"></script>
+  </body>
+</html>

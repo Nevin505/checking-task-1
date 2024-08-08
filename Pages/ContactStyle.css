@@ -1,0 +1,200 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #ff6600;
+  --secondary: #fff2d7;
+  --secondary-hover: #c2540c;
+  --max-screen-width: 1420px;
+  --button-padding: 0.5rem 1rem;
+}
+body {
+  max-width: var(--max-screen-width);
+  margin: auto;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-bold-webfont.woff2') format('woff2'),
+       url('/Assets/Font/roboto-bold-webfont.woff') format('woff');
+
+font-weight: bold;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-light-webfont.woff2') format('woff2'),
+  url('/Assets/Font/roboto-light-webfont.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-light-webfont.woff2') format('woff2'),
+  url('/Assets/Font/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+}
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
+padding: 0.8rem 0rem;
+
+}
+
+/* Hero Section Styles */
+.hero {
+  width: 100%;
+  padding: 10rem;
+  background-color: rgb(41, 230, 255);
+  background-image: url("/images/webp/Contact-background-image.webp");
+  background-size: cover;
+  background-position: top;
+}
+.hero-content-conatiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+  color: white;
+}
+.hero-content-conatiner > h1 {
+  font-family: 'Roboto',sans-serif;
+    font-weight: bold;
+  font-size: xx-large;
+}
+.hero-content-conatiner > p {
+  font-family: 'Roboto',sans-serif;
+  font-weight: 400;
+  font-size: larger;
+}
+.decoration-image {
+  width: 100%;
+}
+
+/* contact-info-section Styles */
+.contact-info-section {
+  text-align: center;
+  width: 60%;
+  padding-top: 2rem;
+}
+.contact-info-section > h2 {
+  color: var(--primary);
+}
+.contact-form-header {
+  display: flex;
+  position: relative;
+  padding: 1.5rem 0;
+}
+.contact-form-header > span {
+  flex: 1;
+  /* height: 0.5rem; */
+  border-top: 2px solid black;
+}
+.contact-form-header > h3 {
+  position: absolute;
+  top: 20%;
+  left: 43.5%;
+  background-color: white;
+  padding-inline: 0.4rem;
+}
+
+.featured-section-border-varaiant1 {
+  flex: 1;
+  border-image: linear-gradient(to right, #ffffff 0%, #bebaba 100%) 1;
+  border-width: 2px 0 0 0;
+  border-style: solid;
+  padding: 5px;
+}
+.featured-section-border-varaiant2 {
+  flex: 1;
+  border-image: linear-gradient(to left, #ffffff 0%, #bebaba 100%) 1;
+  border-width: 2px 0 0 0;
+  border-style: solid;
+  padding: 5px;
+}
+
+/* contact-description Styles */
+.contact-description {
+  max-width: 60%;
+  margin: auto;
+  line-height: 1.5rem;
+  padding: 1rem 0;
+}
+
+/* Styles For the Conatct Form */
+#contact-form-container {
+  padding: 2rem;
+  width: 40%;
+
+}
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   align-items: center;
+   margin: auto;
+  gap: 1rem;
+  width: 80%;
+}
+#contact-form>div{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & label{
+        font-weight: bold;
+        font-size: small;
+        color: rgb(190, 183, 183);
+    }
+    
+    & input,textArea{
+        width: 100%;
+    }
+    & textArea{
+        border: 1px rgb(233, 233, 233) solid;
+
+    }
+    & input{
+        padding: 0.4rem 0.8rem;
+        border: 1px rgb(233, 233, 233) solid;
+    }
+}
+
+textarea{
+    resize: none;
+}
+#contact-form>button{
+    padding: 0.6rem 1.2rem;
+    width: max-content;
+    border: none;
+    cursor: pointer;
+}
+
+#errorNameMessage,#errorEmailMessage,#errorSubjectMessage,#errorMessage{
+    color: red;
+}
+
+@media (max-width: 780px) {
+  .hero {
+    padding-inline: 2rem;
+  }
+  .contact-info-section {
+    width: 80%;
+  }
+  #contact-form-header > h3 {
+    left: 30%;
+  }
+  .contact-description {
+    max-width: 80%;
+  }
+  #contact-form-container{
+   width: 80%;
+  }
+}

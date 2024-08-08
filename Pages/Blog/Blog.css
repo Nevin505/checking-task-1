@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #f98866;
+  --secondary: #fff2d7;
+  --secondary-hover: #c2540c;
+  --max-screen-width: 1420px;
+  --button-padding: 0.5rem 1rem;
+  --white: white;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-bold-webfont.woff2') format('woff2'),
+       url('/Assets/Font/roboto-bold-webfont.woff') format('woff');
+
+font-weight: bold;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-light-webfont.woff2') format('woff2'),
+  url('/Assets/Font/roboto-light-webfont.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-light-webfont.woff2') format('woff2'),
+  url('/Assets/Font/roboto-light-webfont.woff') format('woff');
+  font-weight: normal;
+}
+body {
+  max-width: var(--max-screen-width);
+  margin: auto;
+}
+main{
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+} 
+#hero {
+  padding: 10rem;
+  background-image: url("/images/Webp/blog-backgrounImage.webp");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.hero-title {
+  margin: auto;
+  width: fit-content;
+  line-height: 2.25rem;
+  text-align: center;
+  color: var(--white);
+
+  & h1 {
+    font-family: 'Roboto',sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    padding-bottom: 0.4rem;
+  }
+
+  & p {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: larger;
+  }
+}
+.blog-post-container {
+  max-width: 90%;
+  margin: auto;
+  padding-top: 4rem;
+  & h2 {
+    text-transform: uppercase;
+    font-size: medium;
+  }
+}
+.inner-arrow {
+  border-bottom: 0.2rem rgb(226, 226, 226) solid;
+  padding-bottom: 0.5rem;
+  position: relative;
+  & h2{
+   font-family: 'Roboto',sans-serif;
+   font-weight: 400;
+  }
+}
+/* Inner Orange Arrow */
+.inner-arrow::after {
+  content: "";
+  position: absolute;
+  height: 0.15rem;
+  width: 120px;
+  background-color: orange;
+  bottom: -8%;
+}
+
+/* Blog List Styles */
+.blog-list {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  
+}
+/* Each blog Conatiner Desigin */
+.blogs{
+    max-width: 20.5rem;
+    height: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    text-align: center;
+    padding: 0.4rem;
+    
+     & img{
+        max-width: 19.5rem;
+        height: 14rem;
+        object-fit: cover;
+        border-radius: 0.5rem;
+     }
+     
+     & span{
+        width: 4rem;
+        height: 0.1rem;
+        background-color: var(--primary);
+     }
+
+     & h3{
+        width: 80%;
+        font-family: 'Roboto';
+        font-size: medium;
+        font-weight: normal;
+     }
+     & p{
+        font-size: medium;
+        text-align: center;
+        font-family: 'Roboto';
+        font-size: medium;
+        font-weight: normal;
+     }
+}
+
+@media (max-width: 780px) {
+  #hero {
+    padding: 10rem 4rem;
+  }
+}

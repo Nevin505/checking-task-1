@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #f98866;
+  --secondary: #fff2d7;
+  --secondary-hover: #c2540c;
+  --max-screen-width: 1420px;
+  --button-padding: 0.5rem 1rem;
+  --white: white;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-bold-webfont.woff2') format('woff2'),
+       url('/Assets/Font/roboto-bold-webfont.woff') format('woff');
+
+font-weight: bold;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-light-webfont.woff2') format('woff2'),
+  url('/Assets/Font/roboto-light-webfont.woff') format('woff');
+  font-weight: lighter;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/Assets/Font/roboto-regular-webfont.woff2') format('woff2'),
+  url('/Assets/Font/roboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+}
+
+body {
+  max-width: var(--max-screen-width);
+  margin: auto;
+}
+main{
+    padding-top: 4rem;
+}
+  a{
+    text-decoration: none;
+    color: var(--secondary-hover);
+  }
+
+#hero{
+    padding: 10rem;
+    background-image: url(/images/Webp/About-background.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hero-title{
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  color: var(--white);
+  & h1{
+    font-family: 'Roboto',sans-serif;
+    font-weight: bold;
+    font-size: xx-large;
+    padding-bottom: 0.4rem;
+  }
+  & p {
+    font-family: 'Roboto',sans-serif;
+    font-weight: 400;
+    font-size: larger;
+  }
+}
+
+.about-me-container{
+  width: 95%;
+  margin: auto;
+  padding:2rem 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.about-my-info-container{
+  flex: 1;
+  max-width: 34rem;
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
+  & ul{
+    padding-left: 2rem;
+
+  }
+}
+.personal-media-links-container{
+width: 18rem;
+padding: 0.4rem;
+border: 1px grey solid;
+}
+
+.inner-arrow {
+  border-bottom: 0.2rem rgb(226, 226, 226) solid;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+/* Inner Orange Arrow */
+.inner-arrow::after {
+  content: "";
+  position: absolute;
+  height: 0.15rem;
+  width: 2rem;
+  background-color: orange;
+  bottom: -8%;
+}
+
+/* Social media */
+.social-media-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  padding-top: 2.5rem;
+}
+.social-medias{
+  width: 7.2rem;
+  padding: 0.4rem;
+  margin: auto;
+  & a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem; 
+    color: black;
+  }
+  & span{
+    font-weight: bold;
+  }
+}
+.social-medias:hover{
+  & a{
+    color: var(--secondary-hover);
+  }
+}
+@media(max-width:780px){
+  /* .about-my-info-container{
+   width: 100%;
+  } */
+  #hero{
+    padding:10rem 4rem;
+  }
+  .personal-media-links-container{
+    width: 88%;
+  }
+
+}
